@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <title>Inicio de Sesión - Base Entrada</title>
+    <link rel="stylesheet" href="css/login.css">
+    <script defer src="js/login.js"></script>
+</head>
+
+<body>
+    <div class="login-container">
+        <h2>Iniciar Sesión</h2>
+        <form id="loginForm">
+            <div class="input-group">
+                <input type="email" name="correo_php" required>
+                <label>Correo</label>
+            </div>
+            <div class="input-group">
+                <input type="password" name="contraseña_php" required>
+                <label>Contraseña</label>
+            </div>
+            <input type="button" id="verifica" value="Inicia Sesión"  class="shadow__btn">
+        </form>
+        <p class="note">Solo el administrador puede crear tu cuenta</p>
+    </div>
+</body>
+
+</html>

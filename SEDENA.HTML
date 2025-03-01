@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="img/EmblemaMexico.png">
+    <link rel="stylesheet" href="css/SEDENA.css?v=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SEDENA</title>
+    <script src="js/SEDEBA.JS"></script>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="img/EscudoSedena.png" alt="Escudo Sedena">
+        </div>
+        <div class="titulo">
+            <h2 style="text-align: center;">Dirección general de informática
+                <br>
+                Base Entrada
+            </h2>
+        </div>
+        <img src="img/EmblemaMexico.png" alt="Emblema México">
+    </header>
+
+    <form id="frm_empleados" method="post" action="php/guardar.php">
+        <div class="form-container">
+            <div class="form-group">
+                <label for="txt_folio">Folio:</label>
+                <input type="text" name="folio_php" id="txt_folio" placeholder="folio" required>
+
+                <label for="txt_sill">No. CTL S.I.L:</label>
+                <input type="text" name="sill_php" id="txt_sill" placeholder="no.sill" required>
+
+                <label for="txt_serie">No. DE SERIE:</label>
+                <input type="text" name="serie_php" id="txt_serie" placeholder="Serie" required maxlength="30">
+
+                <label for="txt_falla">Falla Reportada:</label>
+                <input type="text" name="falla_php" id="txt_falla" placeholder="falla" required>
+
+                <label for="txt_uu">UU. II. DD. a que Pertenece:</label>
+                <input type="text" name="uu_php" id="txt_uu" placeholder="uu ii a que pertenece" required
+                    maxlength="30">
+
+                <label for="txt_fecha">Fecha de entrada:</label>
+                <input type="text" name="fecha_php" id="txt_fecha" placeholder="fecha" required>
+            </div>
+
+            <div class="form-group">
+                <label for="txt_equipo">Equipo:</label>
+                <input type="text" name="equipo_php" id="txt_equipo" placeholder="Equipo" maxlength="30">
+
+                <label for="txt_marca">Marca:</label>
+                <input type="text" name="marca_php" id="txt_marca" placeholder="Marca" maxlength="30">
+
+                <label for="txt_modelo">Modelo:</label>
+                <input type="text" name="modelo_php" id="txt_modelo" placeholder="Modelo" maxlength="30">
+
+                <label for="txt_situacion">Situación:</label>
+                <input type="text" name="situacion_php" id="txt_situacion" placeholder="situacion" maxlength="30">
+
+                <label><strong>DOC. MANTTO:</strong></label>
+                <select name="oficioR_php" id="select_oficio">
+                    <option value="oficio">OFICIO</option>
+                    <option value="TARJETA">TARJETA</option>
+                    <option value="c.e.i">.C.E.I.</option>
+                    <option value="f.c.a">F.C.A</option>
+                </select>
+
+                <label for="txt_oficio">No. Oficio:</label>
+                <input type="text" name="oficio_php" id="txt_oficio" placeholder="No. oficio: ">
+
+                <label for="txt_fecha_oficio">Fecha Oficio:</label>
+                <input type="text" name="fecha_oficio_php" id="txt_fecha_oficio" placeholder="Fecha Oficio: ">
+            </div>
+        </div>
+
+        <div class="buttons-container">
+            <a href="buscar.html" class="btn">buscar</a>
+            <input type="submit" value="Guardar registro" id="bt_guardar">
+            <a href="borrar.html" class="btn">borrar</a>
+            <a href="siguiente.html" class="btn">registro siguiente</a>
+            <a href="anterior.html" class="btn">registro anterior</a>
+            <a href="ultimo.html" class="btn">ultimo registro</a>
+            <a href="buscar1.html" class="btn">editar</a>
+            <a href="login.html" class="btn">cerrar sesión</a>
+        </div>
+
+        <div class="observaciones-container">
+            <label for="txt_observacion">Observaciones:</label>
+            <input type="text" class="observacion" name="observacion_php" id="txt_observacion"
+                placeholder="observacion">
+
+            <h2>Piezas utilizadas</h2>
+
+            <label for="txt_piezas">Cantidad de piezas:</label>
+            <input type="text" name="piezas_php" id="txt_piezas" placeholder="Refacciones realizadas">
+
+            <label for="txt_descripcion">Descripción:</label>
+            <input type="text" name="desc_php" id="txt_descripcion" placeholder="Descripción">
+
+            <label for="txt_parte">Num de parte:</label>
+            <input type="text" name="parte_php" id="txt_parte" placeholder="Num de parte">
+
+            <label for="txt_num_serie">Num de serie:</label>
+            <input type="text" name="num_serie_php" id="txt_num_serie" placeholder="Numero de serie">
+
+            <label for="txt_reparacion">Actividades realizadas:</label>
+            <input type="text" name="reparacion_php" id="txt_reparacion" placeholder="reparacion">
+
+            <label for="txt_fecha_termino">Fecha de Terminación:</label>
+            <input type="text" name="termino_php" id="txt_fecha_termino" placeholder="fecha termino">
+
+            <label for="txt_responsable">Responsable de la reparación:</label>
+            <input type="text" name="responsable_php" id="txt_responsable" placeholder="Responsable">
+
+            <label for="txt_verificacion_area">Responsable de la verificación:</label>
+            <input type="text" name="verificacion_php" id="txt_verificacion_area"
+                placeholder="Responsable de la verificación">
+        </div>
+    </form>
+
+</body>
+
+</html>

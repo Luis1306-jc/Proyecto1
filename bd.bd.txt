@@ -1,0 +1,40 @@
+CREATE DATABASE sedena;
+USE sedena;
+
+CREATE TABLE sti (
+    ID INT AUTO_INCREMENT PRIMARY KEY,  -- Columna ID con autoincremento y clave primaria
+    folio VARCHAR(20),
+    sill VARCHAR(20),
+    serie VARCHAR(20), 
+    falla VARCHAR(255),  
+    uu VARCHAR(20), 
+    fecha VARCHAR(20), 
+    equipo VARCHAR(100), 
+    marca VARCHAR(50), 
+    modelo VARCHAR(80),  
+    situacion VARCHAR(100),
+    oficio VARCHAR(50),
+    noOficio VARCHAR(50), 
+    fechaOficio VARCHAR(20),  
+    observacion VARCHAR(100),  
+    piezas VARCHAR(50),  
+    descripcion VARCHAR(80),  
+    parte VARCHAR(50),
+    num_serie VARCHAR(50),
+    reparacion VARCHAR(50),  
+    fechaTermino VARCHAR(20),  
+    responsable VARCHAR(50),  
+    verificacion VARCHAR(100)
+);
+CREATE DATABASE usuarios;
+
+USE usuarios;
+
+CREATE TABLE cuentas (
+nombre varchar(20), 
+apellido varchar(20), 
+correo varchar(20), 
+contraseña INT);
+
+INSERT INTO cuentas VALUES
+('juan', 'fernanadez', '22302156@utfv.edu.mx', 1234);

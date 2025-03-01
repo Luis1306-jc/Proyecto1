@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscar Anterior Registro</title>
+    <link rel="icon" href="img/EmblemaMexico.png">
+    <link rel="stylesheet" href="css/siguiente.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="card" id="card-content">
+            <h2>Buscar Anterior Registro</h2>
+            <form id="frm_sal" method="post" action="php/anterior.php">
+                <input type="button" id="bt_buscar" value="Buscar">
+                <a href="SEDENA.HTML" class="link-regresar">Inicio</a>
+            </form>
+        </div>
+
+        <!-- Spinner oculto inicialmente -->
+        <div class="dot-spinner-container" id="spinner-container" style="display: none;">
+            <div class="dot-spinner" id="spinner">
+                <div class="dot-spinner__dot"></div>
+                <div class="dot-spinner__dot"></div>
+                <div class="dot-spinner__dot"></div>
+                <div class="dot-spinner__dot"></div>
+                <div class="dot-spinner__dot"></div>
+                <div class="dot-spinner__dot"></div>
+                <div class="dot-spinner__dot"></div>
+                <div class="dot-spinner__dot"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        addEvent(window, 'load', cargar, false);
+
+        function addEvent(ele, eve, fun, cap) {
+            if (window.attachEvent)
+                ele.attachEvent('on' + eve, fun);
+            else
+                ele.addEventListener(eve, fun, cap);
+        }
+
+        function cargar() {
+            var sal = document.getElementById("bt_buscar");
+            addEvent(sal, 'click', enviarDatos, false);
+        }
+
+        function enviarDatos() {
+            // Ocultar todo el contenido y mostrar el spinner
+            document.getElementById("card-content").style.display = "none";
+            document.getElementById("spinner-container").style.display = "flex"; // Mostrar el spinner centrado
+
+            // Simulamos un retraso de 2 segundos antes de enviar el formulario
+            setTimeout(function () {
+                document.getElementById("frm_sal").submit();
+            }, 2000); // Retraso de 2 segundos
+        }
+
+        // Al regresar de la página, mostrar todo de nuevo y ocultar el spinner
+        window.addEventListener("pageshow", function (event) {
+            // Asegurarse de que el spinner se oculte y el contenido se muestre nuevamente
+            document.getElementById("spinner-container").style.display = "none";
+            document.getElementById("card-content").style.display = "block";
+        });
+    </script>
+</body>
+
+</html>

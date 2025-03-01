@@ -1,0 +1,119 @@
+body {
+    background: linear-gradient(135deg, #004d40, #1b5e20);
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+.card h1 {
+    color: #1b5e20;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.card label {
+    color: #333;
+    display: block;
+    text-align: left;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.card input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.card input[type="button"] {
+    background-color: #d32f2f;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    width: 100%;
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    margin-top: 10px;
+}
+
+.card input[type="button"]:hover {
+    background-color: #c62828;
+    transform: scale(1.03);
+}
+
+.card input[type="button"]:active {
+    background-color: #b71c1c;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transform: scale(0.98);
+}
+
+.boton-regresar {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+.boton-regresar button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 3em;
+    width: 130px;
+    background: linear-gradient(135deg, #388e3c, #1b5e20);
+    /* Nuevo fondo degradado verde */
+    border-radius: 5px;
+    letter-spacing: 1px;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    font-weight: bold;
+    color: white;
+    border: none;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.boton-regresar button svg {
+    margin-right: 8px;
+    font-size: 18px;
+    transition: all 0.3s ease-in-out;
+    fill: white;
+}
+
+.boton-regresar button:hover {
+    background: linear-gradient(135deg, #2e7d32, #004d40);
+    /* Cambio de color al pasar el cursor */
+    transform: scale(1.05);
+}
+
+.boton-regresar button:hover svg {
+    transform: translateX(-5px);
+}

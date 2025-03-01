@@ -1,0 +1,182 @@
+/* Estilos generales del cuerpo */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: url('EmblemaMexico.png') no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 20px;
+    color: #ffffff;
+}
+
+/* Capa de oscurecimiento y desenfoque */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(8px);
+    z-index: -1;
+}
+
+/* Encabezado con transparencia */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.15);
+    color: white;
+    padding: 15px 30px;
+    height: 80px;
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2);
+}
+
+/* Logo */
+.logo img {
+    height: 100px;
+    width: auto;
+}
+
+/* Título */
+.titulo {
+    flex-grow: 2;
+    display: flex;
+    justify-content: center;
+    font-size: 28px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Contenedor */
+.contenedor {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(12px);
+    margin-top: 20px;
+}
+
+/* Contenedor principal del formulario */
+form {
+    width: 300px;
+    margin: 50px auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(12px);
+    color: #ffffff;
+}
+
+/* Títulos y textos dentro del formulario */
+form h2 {
+    text-align: center;
+    color: #ffffff;
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Estilo para el campo de texto */
+form input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    font-size: 16px;
+    transition: all 0.3s ease-in-out;
+}
+
+form input[type="text"]:focus {
+    border: 2px solid #00c3ff;
+    outline: none;
+    box-shadow: 0 0 12px rgba(0, 195, 255, 0.7);
+}
+
+/* Estilo para el botón de búsqueda */
+form input[type="button"] {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+form input[type="button"]:hover {
+    background: linear-gradient(135deg, #0056b3, #004494);
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 99, 255, 0.5);
+}
+
+/* Mensajes de alerta */
+.alert {
+    color: #e74c3c;
+    font-size: 14px;
+    text-align: center;
+}
+
+/* Tabla */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+th,
+td {
+    padding: 14px;
+    text-align: left;
+    color: white;
+}
+
+th {
+    background: rgba(0, 123, 255, 0.7);
+    text-transform: uppercase;
+}
+
+tr:nth-child(even) {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* Botones */
+button,
+input[type="submit"] {
+    background: linear-gradient(135deg, #ff6b6b, #ff4757);
+    color: white;
+    padding: 14px 28px;
+    border: none;
+    border-radius: 12px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+button:hover,
+input[type="submit"]:hover {
+    background: linear-gradient(135deg, #ff4757, #e84118);
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(255, 99, 99, 0.5);
+}

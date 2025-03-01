@@ -1,0 +1,61 @@
+create database transporte;
+use transporte;
+
+******************************************************************************
+CREATE TABLE registro(
+clave INT,
+nombre VARCHAR(50),
+paterno VARCHAR(50),
+materno VARCHAR(50),
+nacimiento VARCHAR(50),
+sexo VARCHAR(50),
+telefono VARCHAR(50),
+correo VARCHAR(50),
+modelo VARCHAR(50),
+marca VARCHAR(50),
+matricula VARCHAR(50),
+fabricacion INT,
+tipo VARCHAR(50),
+capacidad FLOAT);
+
+INSERT INTO registro 
+VALUES (00001, 'Angel', 'Verdin', 'Zuñiga', '02/12/2002', 'Masculino', '1234567890', 'ejemplo@example.com', 'Mercedes Benz', 'Toyota', 'ABC123', 2020, 'Volquete', 8.5);
+
+******************************************************************************
+CREATE TABLE tipo_camion(
+tipo VARCHAR(50));
+
+INSERT INTO tipo_camion
+VALUES ('Remolque');
+
+INSERT INTO tipo_camion
+VALUES ('Furgon');
+
+INSERT INTO tipo_camion
+VALUES ('Plataforma');
+
+INSERT INTO tipo_camion
+VALUES ('Volquete');
+
+INSERT INTO tipo_camion
+VALUES ('Cisterna');
+
+INSERT INTO tipo_camion
+VALUES ('Camion_grua');
+******************************************************************************
+USUARIOS
+
+create database prueba;
+use prueba;
+
+******************************************************************************
+CREATE TABLE users (
+    id INT(11) NOT NULL AUTO_INCREMENT,
+    username VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    password VARCHAR(255) NOT NULL,
+    PRIMARY KEY (id)
+);
+******************************************************************************
+INSERT INTO users (username, email, password) VALUES
+('usuarioPrueba', 'usuaP@gmail.com', '12345678');

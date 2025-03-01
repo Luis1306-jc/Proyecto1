@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiénes Somos - SEDENA</title>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    
+    <!-- FontAwesome para iconos -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <style>
+       body {
+            font-family: "Arial", sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('https://upload.wikimedia.org/wikipedia/commons/2/24/Ejercito_Mexicano.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+        }
+
+        /* Efecto de Oscurecimiento para Mejor Lectura */
+        .overlay {
+            background: rgba(0, 0, 0, 0.7);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+        }
+
+        .container {
+            position: relative;
+            z-index: 1;
+            width: 85%;
+            margin: auto;
+            padding: 25px;
+            background: rgba(21, 71, 52, 0.9); /* Verde Militar con transparencia */
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        h1, h2 {
+            text-align: center;
+            color: #C19A6B; /* Dorado */
+        }
+
+        .section {
+            padding: 20px;
+            margin-bottom: 20px;
+            border-left: 5px solid #C19A6B; /* Dorado */
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 5px;
+            text-align: left;
+        }
+
+        .icon {
+            color: #C19A6B;
+            margin-right: 10px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        ul li {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        ul li:last-child {
+            border-bottom: none;
+        }
+
+        /* Botón */
+        .btn {
+            display: inline-block;
+            width: 220px;
+            margin: 20px;
+            text-align: center;
+            padding: 12px;
+            background: #C19A6B; /* Dorado */
+            color: white;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 18px;
+            transition: 0.3s;
+            border: 2px solid #A67C52;
+        }
+
+        .btn:hover {
+            background: #A67C52;
+            transform: scale(1.05);
+        }
+
+        /* Ubicación */
+        .location {
+            text-align: center;
+        }
+
+        .map {
+            width: 100%;
+            height: 350px;
+            border: none;
+            border-radius: 10px;
+        }
+    </style>
+       <script>
+        // Alerta de Bienvenida con SweetAlert2
+        window.onload = function() {
+            Swal.fire({
+                title: "¡Bienvenido!",
+                text: "Accede a información sobre SEDENA y su mantenimiento tecnológico.",
+                icon: "info",
+                confirmButtonText: "Aceptar",
+                background: "#154734",  // Verde Militar
+                color: "#ffffff",  // Texto Blanco
+                confirmButtonColor: "#C19A6B" // Dorado
+            });
+        };
+    </script>
+</head>
+<body>
+
+<div class="container">
+    <h1>Quiénes Somos</h1>
+    <div class="section">
+        <p>En la <strong>Secretaría de la Defensa Nacional (SEDENA)</strong>, trabajamos para garantizar el óptimo funcionamiento de los sistemas informáticos en nuestras dependencias. Nuestro equipo de especialistas y pasantes capacitados se encarga del <strong>mantenimiento preventivo y correctivo</strong> del equipamiento tecnológico, asegurando sistemas eficientes y sin interrupciones.</p>
+    </div>
+
+    <h2>Objetivos</h2>
+    <div class="section">
+        <h3><i class="icon fas fa-bullseye"></i> Objetivo General</h3>
+        <p>Optimizar la infraestructura informática de la SEDENA mediante <strong>mantenimiento preventivo y correctivo</strong>, garantizando el rendimiento y prolongando la vida útil de los equipos utilizados en sus operaciones.</p>
+
+        <h3><i class="icon fas fa-check-circle"></i> Objetivos Específicos</h3>
+        <ul>
+            <li><i class="icon fas fa-laptop-medical"></i> Diagnosticar periódicamente los equipos para detectar y prevenir fallas.</li>
+            <li><i class="icon fas fa-tools"></i> Aplicar mantenimiento en hardware y software asegurando su correcto funcionamiento.</li>
+            <li><i class="icon fas fa-user-graduate"></i> Capacitar al personal de la SEDENA en buenas prácticas de mantenimiento.</li>
+            <li><i class="icon fas fa-file-alt"></i> Documentar cada proceso técnico para mejoras futuras.</li>
+        </ul>
+    </div>
+
+    <h2>Ubicación</h2>
+    <div class="section location">
+        <p><i class="icon fas fa-map-marker-alt"></i> <strong>Campo Militar No. 1J - División de Informática</strong></p>
+        <p><i class="icon fas fa-building"></i> Predio Reforma, Ciudad de México</p>
+        <p><i class="icon fas fa-server"></i> Secretaría de la Defensa Nacional (SEDENA)</p>
+        <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3763.666064228279!2d-99.13320868458267!3d19.390112446653997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1fed68e120001%3A0x8c9e7d11642c60b7!2sCampo%20Militar%20No.%201%20-%20SEDENA!5e0!3m2!1ses!2smx!4v1642610242896!5m2!1ses!2smx" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+
+    <!-- Botón para dirigir a otra página -->
+    <a href="login.html" class="btn"><i class="fas fa-arrow-right"></i> base entrada</a>
+
+</div>
+
+</body>
+</html>
